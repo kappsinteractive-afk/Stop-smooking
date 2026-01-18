@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спри цигарите - Политика за поверителност</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 10px 40px rgba(46, 125, 50, 0.3);
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card h2 {
+            color: #2E7D32;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            border-radius: 2px;
+        }
+        
+        .card p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+        
+        .card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+        
+        .card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .app-info {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+        
+        .app-info h2 {
+            color: #4CAF50;
+        }
+        
+        .app-info h2::before {
+            background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
+        }
+        
+        .app-info p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .contact-box a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            header {
+                padding: 30px 15px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">🚭</div>
+            <h1>Спри цигарите</h1>
+            <p class="subtitle">Твоят помощник за живот без цигари</p>
+            <span class="badge">Версия 1.0.0</span>
+        </header>
+
+        <div class="card app-info">
+            <h2>За приложението</h2>
+            <p>
+                "Спри цигарите" е приложение, създадено да ти помогне да се откажеш от пушенето завинаги. 
+                Проследявай напредъка си, виж как здравето ти се възстановява и получавай мотивация всеки ден.
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">⏱️</div>
+                    <div class="feature-title">Брояч на времето</div>
+                    <div class="feature-desc">Виж колко време си без цигара</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">Спестени пари</div>
+                    <div class="feature-desc">Проследи спестените пари</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">❤️</div>
+                    <div class="feature-title">Здравни ползи</div>
+                    <div class="feature-desc">Виж как тялото ти се възстановява</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <div class="feature-title">Постижения</div>
+                    <div class="feature-desc">Отключвай постижения</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Политика за поверителност</h2>
+        </div>
+
+        <div class="card">
+            <h2>Въведение</h2>
+            <p>
+                Добре дошли в Спри цигарите. Вашата поверителност е важна за нас. 
+                Тази политика за поверителност обяснява как обработваме вашите данни.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Събиране на данни</h2>
+            <p>
+                Нашето приложение <strong>НЕ събира лични данни</strong>. Всички данни, които въвеждате 
+                (дата на спиране, брой цигари на ден, цена на кутия и др.), се съхраняват 
+                <strong>САМО локално на вашето устройство</strong>.
+            </p>
+            <p>
+                Не изпращаме, не споделяме и не продаваме никакви ваши данни на трети страни.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Локално съхранение</h2>
+            <p>Данните се съхраняват на вашето устройство. Това включва:</p>
+            <ul>
+                <li>Дата и час на спиране</li>
+                <li>Брой цигари на ден</li>
+                <li>Цена на кутия цигари</li>
+                <li>Брой цигари в кутия</li>
+                <li>Настройки за тема (светла/тъмна)</li>
+                <li>Данни за преодолени пориви</li>
+                <li>Настройки за известия</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Реклами</h2>
+            <p>
+                Приложението показва реклами чрез Google AdMob. Google може да събира анонимни данни 
+                за подобряване на рекламите. За повече информация, моля, посетете 
+                <a href="https://policies.google.com/privacy" target="_blank">политиката за поверителност на Google</a>.
+            </p>
+            <p>
+                Можете да премахнете рекламите чрез еднократна покупка в приложението.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Покупки в приложението</h2>
+            <p>
+                Покупките се обработват чрез Apple App Store и Google Play Store. 
+                Ние не съхраняваме информация за плащане.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Сигурност</h2>
+            <p>
+                Тъй като всички данни се съхраняват локално на вашето устройство, вие имате пълен контрол върху тях. 
+                Изтриването на приложението ще изтрие всички съхранени данни.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Промени в политиката</h2>
+            <p>
+                Можем да актуализираме тази политика за поверителност. Ще ви уведомим за всички промени 
+                чрез публикуване на новата политика в приложението и на тази страница.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Контакт</h2>
+            <p>
+                Ако имате въпроси относно тази политика за поверителност или приложението, 
+                моля свържете се с нас:
+            </p>
+            <div class="contact-box">
+                <a href="mailto:kapps.interactive@gmail.com">kapps.interactive@gmail.com</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Последна актуализация: Януари 2025</p>
+            <p style="margin-top: 10px;">© 2025 Спри цигарите. Всички права запазени.</p>
+        </footer>
+    </div>
+</body>
+</html>
